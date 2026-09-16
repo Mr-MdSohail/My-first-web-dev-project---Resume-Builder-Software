@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📄 Resume Builder</h1>
+            <p>Create Your Professional Resume</p>
+        </div>
+
+        <div class="main">
+            <!-- FORM -->
+            <div class="form">
+                <h2>Your Details</h2>
+
+                <label>Upload Photo</label>
+                <input type="file" id="photo" accept="image/*" class="inp">
+                <small>Choose a professional photo</small>
+
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="Your Name" class="inp">
+
+                <label>Job Title</label>
+                <input type="text" id="job" placeholder="Student / Position" class="inp">
+
+                <label>Email</label>
+                <input type="email" id="email" placeholder="email@example.com" class="inp">
+
+                <label>Phone</label>
+                <input type="tel" id="phone" placeholder="9876543210" class="inp">
+
+                <label>Address</label>
+                <input type="text" id="addr" placeholder="City, State, Country" class="inp">
+
+                <label>About You</label>
+                <textarea id="about" placeholder="Tell about yourself..." class="inp"></textarea>
+
+                <label>College Name</label>
+                <input type="text" id="college" placeholder="University Name" class="inp">
+
+                <label>Degree</label>
+                <input type="text" id="degree" placeholder="B.Tech, M.Tech, etc" class="inp">
+
+                <label>Year</label>
+                <input type="text" id="year" placeholder="2020-2024" class="inp">
+
+                <label>Skill 1</label>
+                <input type="text" id="skill1" placeholder="Skill" class="inp">
+
+                <label>Skill 2</label>
+                <input type="text" id="skill2" placeholder="Skill" class="inp">
+
+                <label>Skill 3</label>
+                <input type="text" id="skill3" placeholder="Skill" class="inp">
+
+                <label>Experience Title</label>
+                <input type="text" id="exptitle" placeholder="Job / Project Name" class="inp">
+
+                <label>Experience Details</label>
+                <textarea id="expdetail" placeholder="What did you do?" class="inp"></textarea>
+
+                <div class="buttons">
+                    <button onclick="downloadPDF()" class="btn btn1">📥 Download PDF</button>
+                    <button onclick="clearAll()" class="btn btn2">🔄 Clear</button>
+                </div>
+            </div>
+
+            <!-- RESUME -->
+            <div class="resume" id="resume">
+                <!-- LEFT SIDE -->
+                <div class="left">
+                    <img id="photoImg" src="dummyphoto.jpg" class="photo">
+
+                    <div class="box">
+                        <h3>PROFILE</h3>
+                        <p id="rAbout">I am a responsible and orderly person...</p>
+                    </div>
+
+                    <div class="box">
+                        <h3>CONTACT</h3>
+                        <div class="contact">
+                            <span>📱</span>
+                            <span id="rPhone">9876543210</span>
+                        </div>
+                        <div class="contact">
+                            <span>✉️</span>
+                            <span id="rEmail">email@example.com</span>
+                        </div>
+                        <div class="contact">
+                            <span>📍</span>
+                            <span id="rAddr">City, State</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="right">
+                    <div class="top">
+                        <h1 id="rName">Your Name</h1>
+                        <p id="rJob">Position</p>
+                    </div>
+
+                    <div class="sec">
+                        <h2>EDUCATION</h2>
+                        <h3 id="rCollege">University</h3>
+                        <p id="rDegree">Degree</p>
+                        <p id="rYear">2020-2024</p>
+                    </div>
+
+                    <div class="sec">
+                        <h2>SKILLS</h2>
+                        <div class="skills">
+                            <span class="tag" id="rSkill1">Skill</span>
+                            <span class="tag" id="rSkill2">Skill</span>
+                            <span class="tag" id="rSkill3">Skill</span>
+                        </div>
+                    </div>
+
+                    <div class="sec">
+                        <h2>EXPERIENCE</h2>
+                        <h3 id="rExpTitle">Project Name</h3>
+                        <p id="rExpDetail">Description...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
